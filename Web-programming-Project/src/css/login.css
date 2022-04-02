@@ -1,0 +1,104 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap%27");
+/* Color */
+:root {
+  --main-background: linear-gradient(to right, #141e30, #243b55);
+  --font-style: "Zen Maru Gothic", sans-serif;
+  --font-color-light: #ffff;
+  --font-color-dark: #0000;
+  --color-primary: #0a043c;
+  --color-secondary: #091940;
+  --font-color-light-secondary: cornflowerblue;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-style);
+}
+
+/* Nav Bar */
+.nav-main {
+  background:#141e30;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 2px solid #F16357;
+}
+.btn-burger:hover {
+  color: var(--font-color-light);
+}
+.logo {
+  color: var(--font-color-light);
+}
+.btn-search {
+  background: var(--main-background);
+  color: var(--font-color-light);
+}
+.btn-search:hover {
+  background: var(--font-color-light-secondary);
+}
+/* content */
+.content {
+  background: var(--main-background);
+  height: 970px;
+}
+.login-box {
+  /* border: 1px solid red; */
+  /* height: 500px; */
+  width: 100%;
+  position: relative;
+  top: 200px;
+}
+.title {
+  height: 100px;
+  width: 100%;
+  /* border: 1px solid white; */
+  text-align: center;
+  color: var(--font-color-light);
+  padding: 20px;
+}
+.content-box {
+  width: 80%;
+  height: 100%;
+  padding: 25px;
+}
+.form-box {
+  height: auto;
+  width: 100%;
+  /* border: 1px solid white; */
+}
+.form-group {
+  width: 50%;
+}
+.input-box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.input-box label {
+  color: var(--font-color-light);
+  width: 100%;
+  font-size: 25px;
+}
+.btn-login {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50px;
+  border: 0;
+  background: salmon;
+  transition: 0.5s;
+}
+.btn-login:hover {
+  background-color: #F16357;
+  transform: scale(1.1);
+}
+.focus {
+  transform: scale(1.1);
+}
+
+.login_footer {
+  color: white;
+}
