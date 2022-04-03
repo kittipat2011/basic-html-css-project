@@ -27,10 +27,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # folder
-Web-programming-Project/node_modules
-Webprogramming-Service/node_modules
-react_project/node_modules
-node_modules
+Web-programming-Project/node_modules/
+Webprogramming-Service/node_modules/
+react_project/node_modules/
+node_modules/
 
 # etc
 run.bat
