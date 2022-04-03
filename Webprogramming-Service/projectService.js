@@ -54,25 +54,6 @@ router.get("/", function (req, res) {
 });
 
 
-// router.get("/user_information", function (req, res){
-//     console.log("(!) Sommon student(s) list ...");
-//     connection.query("SELECT * FROM user_information", function (error, results) {
-//     if(error) throw error;
-//         return res.send({ error: false, data: results, message: "Successfully summon the student(s) list." });
-//     });
-// });
-
-
-// router.get("/artist", function (req, res){
-//     console.log("(!) Sommon artist(s) list ...");
-//     connection.query("SELECT * FROM artist", function (error, results) {
-//     if(error) throw error;
-//         return res.send({ error: false, data: results, message: "Successfully summon the artist(s) list." });
-//     });
-// });
-
-
-
 ////////////////////
 /* GET ALL method */
 ////////////////////
@@ -89,7 +70,87 @@ router.get("/artists", function (req, res) {
         });
     });
 });
-
+/*
+@Test Case
+URL:"http://localhost:3000/artists"
+method :"GET all"
+ิbody :{
+    "error": false,
+    "data": [
+        {
+            "ArtistID": "20000215",
+            "ArtistName": "M2M",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2013-01-23T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20081014",
+            "ArtistName": "Katy Perry",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2011-04-17T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20091111",
+            "ArtistName": "2PM",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2010-05-24T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20111103",
+            "ArtistName": "CNBLUE",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2020-09-25T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20187894",
+            "ArtistName": "N.flying",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2018-11-08T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20455980",
+            "ArtistName": "Wonder girl",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2007-02-11T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20645755",
+            "ArtistName": "jay park",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2022-12-11T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20657544",
+            "ArtistName": "Maroon5",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2021-10-01T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20657788",
+            "ArtistName": "J.don",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2015-07-11T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        },
+        {
+            "ArtistID": "20879812",
+            "ArtistName": "GOT7",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2020-06-06T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        }
+    ],
+    "massage": "artists list"
+}
+*/
 //------------------------- Song -------------------------------
 
 router.get("/songs", function (req, res) {
@@ -102,7 +163,97 @@ router.get("/songs", function (req, res) {
         });
     });
 });
-
+/*
+@Test Case
+URL:"http://localhost:3000/songs"
+method :"GET all"
+ิbody :{
+    "error": false,
+    "data": [
+        {
+            "SongID": "14795680",
+            "SongName": "Amnesia",
+            "SongPicture": "www.songShazamGroup13_14795680",
+            "SongReleaseDate": "2020-09-25T17:00:00.000Z",
+            "ArtistID": "20111103",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "16425930",
+            "SongName": "Cant stop",
+            "SongPicture": "www.songShazamGroup13_16425930",
+            "SongReleaseDate": "2011-04-17T17:00:00.000Z",
+            "ArtistID": "20081014",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "18254424",
+            "SongName": "Ganadara",
+            "SongPicture": "www.songShazamGroup13_18254424",
+            "SongReleaseDate": "2022-12-11T17:00:00.000Z",
+            "ArtistID": "20645755",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "44485299",
+            "SongName": "Hard Carry",
+            "SongPicture": "www.songShazamGroup13_44485299",
+            "SongReleaseDate": "2021-10-01T17:00:00.000Z",
+            "ArtistID": "20657544",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "46518604",
+            "SongName": "Nobody",
+            "SongPicture": "www.songShazamGroup13_46518604",
+            "SongReleaseDate": "2007-02-11T17:00:00.000Z",
+            "ArtistID": "20455980",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "48148935",
+            "SongName": "Hot N Cold",
+            "SongPicture": "www.songShazamGroup13_48148935",
+            "SongReleaseDate": "2015-07-11T17:00:00.000Z",
+            "ArtistID": "20657788",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "52048757",
+            "SongName": "Clicker",
+            "SongPicture": "www.songShazamGroup13_52048757",
+            "SongReleaseDate": "2018-11-08T17:00:00.000Z",
+            "ArtistID": "20187894",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "59175860",
+            "SongName": "HeartBeat",
+            "SongPicture": "www.songShazamGroup13_59175860",
+            "SongReleaseDate": "2010-05-24T17:00:00.000Z",
+            "ArtistID": "20091111",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "63996461",
+            "SongName": "Intution",
+            "SongPicture": "www.songShazamGroup13_63996461",
+            "SongReleaseDate": "2020-06-06T17:00:00.000Z",
+            "ArtistID": "20879812",
+            "SongDesc": "testDesc"
+        },
+        {
+            "SongID": "66292904",
+            "SongName": "Mirror Mirror",
+            "SongPicture": "www.songShazamGroup13_66292904",
+            "SongReleaseDate": "2013-01-23T17:00:00.000Z",
+            "ArtistID": "20000215",
+            "SongDesc": "testDesc"
+        }
+    ],
+    "massage": "songs list"
+}
+*/
 //------------------------- user_information -------------------------------
 
 router.get("/user_information", function (req, res) {
@@ -115,7 +266,127 @@ router.get("/user_information", function (req, res) {
         });
     });
 });
-
+/*
+@Test Case
+URL:"http://localhost:3000/user_information"
+method :"GET all"
+ิbody :{
+    "error": false,
+    "data": [
+        {
+            "UserID": "37146800",
+            "UserName": "user05",
+            "UserPassword": "8q8gWZIw4zSa",
+            "Firstname": "Jazmin",
+            "Lastname": "Dickinson",
+            "Email": "Jazmin_223@test.com",
+            "Address": "Buri Ram,",
+            "Age": 16,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "37189890",
+            "UserName": "user06",
+            "UserPassword": "AI9i2YQSrool",
+            "Firstname": "Orlaith",
+            "Lastname": "Gomez",
+            "Email": "Orl06_f@test.com",
+            "Address": "Nakhon Si Thammarat,",
+            "Age": 25,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "38886985",
+            "UserName": "user08",
+            "UserPassword": "ZlMbHHuE5xYA",
+            "Firstname": "Maja",
+            "Lastname": "Wardle",
+            "Email": "test@test.com",
+            "Address": "Chiang Mai,",
+            "Age": 28,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "41350896",
+            "UserName": "user02",
+            "UserPassword": "hSWMsWropt6G",
+            "Firstname": "Sorawanan",
+            "Lastname": "Jeamjantarakhon",
+            "Email": "Sorawanan@test.com",
+            "Address": "Chiang Mai,",
+            "Age": 20,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "49094673",
+            "UserName": "user01",
+            "UserPassword": "v52xY2UP2eOY",
+            "Firstname": "Kittipat",
+            "Lastname": "Arpanon",
+            "Email": "Kittipat@test.com",
+            "Address": "Bangkok,",
+            "Age": 20,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "65409030",
+            "UserName": "user04",
+            "UserPassword": "5i6UgJf9wOSk",
+            "Firstname": "Busarin",
+            "Lastname": "Jensai",
+            "Email": "Busarin@test.com",
+            "Address": "Kanchanaburi,",
+            "Age": 20,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "68358768",
+            "UserName": "user07",
+            "UserPassword": "wxmu5EVMYbf1",
+            "Firstname": "Pia",
+            "Lastname": "Alston",
+            "Email": "test@test.com",
+            "Address": "Bangkok,",
+            "Age": 32,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "80801145",
+            "UserName": "user03",
+            "UserPassword": "4Fz0yjCUYnPx",
+            "Firstname": "Danaidech",
+            "Lastname": "Ardsamai",
+            "Email": "Danaidech@test.com",
+            "Address": "Pathum Thani,",
+            "Age": 20,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "85388336",
+            "UserName": "user09",
+            "UserPassword": "KXFu4AMNifDD",
+            "Firstname": "Abbie",
+            "Lastname": "Whelan",
+            "Email": "test@test.com",
+            "Address": "Yala,",
+            "Age": 24,
+            "UserRole": "user"
+        },
+        {
+            "UserID": "99999999",
+            "UserName": "Admin8",
+            "UserPassword": "adminRxr!08]",
+            "Firstname": "admin",
+            "Lastname": "group8",
+            "Email": "admin@admin.admin",
+            "Address": "Nakhon Pathom,",
+            "Age": 23,
+            "UserRole": "admin"
+        }
+    ],
+    "massage": "user_information  list"
+}
+*/
 //------------------------- login_history -------------------------------
 
 router.get("/login_history", function (req, res) {
@@ -128,8 +399,77 @@ router.get("/login_history", function (req, res) {
         });
     });
 });
-
-
+/*
+@Test Case
+URL:"http://localhost:3000/login_history"
+method :"GET all"
+ิbody :{
+    "error": false,
+    "data": [
+        {
+            "HistoryID": "20765356",
+            "UserID": "49094673",
+            "UserName": "Kittipat",
+            "UserRole": "user"
+        },
+        {
+            "HistoryID": "22421076",
+            "UserID": "65409030",
+            "UserName": "Busarin",
+            "UserRole": "user"
+        },
+        {
+            "HistoryID": "46913165",
+            "UserID": "85388336",
+            "UserName": "Abbie",
+            "UserRole": "user"
+        },
+        {
+            "HistoryID": "49743434",
+            "UserID": "37189890",
+            "UserName": "Orlaith",
+            "UserRole": "user"
+        },
+        {
+            "HistoryID": "52933419",
+            "UserID": "99999999",
+            "UserName": "group8",
+            "UserRole": "admin"
+        },
+        {
+            "HistoryID": "54144910",
+            "UserID": "68358768",
+            "UserName": "Danaidech",
+            "UserRole": "user"
+        },
+        {
+            "HistoryID": "71897690",
+            "UserID": "80801145",
+            "UserName": "Jazmin",
+            "UserRole": "user"
+        },
+        {
+            "HistoryID": "78036602",
+            "UserID": "38886985",
+            "UserName": "Maja",
+            "UserRole": "user"
+        },
+        {
+            "HistoryID": "79473808",
+            "UserID": "99999999",
+            "UserName": "group8",
+            "UserRole": "admin"
+        },
+        {
+            "HistoryID": "86052197",
+            "UserID": "41350896",
+            "UserName": "Sorawanan",
+            "UserRole": "user"
+        }
+    ],
+    "massage": "login historys list"
+}
+*/
 
 ////////////////
 /* GET method */
@@ -159,6 +499,38 @@ router.get("/artist/:id", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/artist/20111103"
+method :"GET"
+ิbody :{
+    "error": false,
+    "data": {
+        "ArtistID": "20111103",
+        "ArtistName": "CNBLUE",
+        "ArtistPicture": "www.google.com",
+        "ArtistDOB": "2020-09-25T17:00:00.000Z",
+        "ArtistDesc": "testDesc"
+    },
+    "massage": "artist retrieved."
+}
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/artist/20645755"
+method :"GET"
+ิbody :{
+    "error": false,
+    "data": {
+        "ArtistID": "20645755",
+        "ArtistName": "jay park",
+        "ArtistPicture": "www.google.com",
+        "ArtistDOB": "2022-12-11T17:00:00.000Z",
+        "ArtistDesc": "testDesc"
+    },
+    "massage": "artist retrieved."
+}
+*/
 
 //GET Artist Name
 router.get("/artistname/:name", function (req, res) {
@@ -184,7 +556,42 @@ router.get("/artistname/:name", function (req, res) {
         });
     });
 });
-
+/*
+@Test Case 1
+URL:"http://localhost:3000/artistname/Maroon5"
+method :"GET"
+ิbody :{
+    "error": false,
+    "data": [
+        {
+            "ArtistID": "20657544",
+            "ArtistName": "Maroon5",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2021-10-01T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        }
+    ],
+    "massage": "ArtistName retrieved."
+}
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/artistname/M2M"
+method :"GET"
+ิbody :{
+    "error": false,
+    "data": [
+        {
+            "ArtistID": "20000215",
+            "ArtistName": "M2M",
+            "ArtistPicture": "www.google.com",
+            "ArtistDOB": "2013-01-23T17:00:00.000Z",
+            "ArtistDesc": "testDesc"
+        }
+    ],
+    "massage": "ArtistName retrieved."
+}
+*/
 //GET Artist Picture
 router.get("/artistpicture/:Picture", function (req, res) {
     let ArtistPicture = req.params.Picture;
@@ -742,6 +1149,46 @@ router.post("/upload_artist", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/upload_artist"
+method :"POST"
+ิInput body :{
+    "artist":{
+        "ArtistID":"20091256",
+        "ArtistName":"Eminem",
+        "ArtistPicture" : "www.google.com",
+        "ArtistDOB": "2007-09-13 00:00:00",
+        "ArtistDesc" : "testDesc"
+    }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "massage": "add done!"
+}
+
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/upload_artist"
+method :"POST"
+ิInput body :{
+    "artist":{
+        "ArtistID":"20091864",
+        "ArtistName":"Selena Gomez",
+        "ArtistPicture" : "www.google.com",
+        "ArtistDOB": "2007-09-13 00:00:00",
+        "ArtistDesc" : "testDesc"
+    }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "massage": "add done!"
+}
+
+*/
 //--------------------------- Song ---------------------------------------
 // upload song
 router.post("/upload_song", function (req, res) {
@@ -763,6 +1210,48 @@ router.post("/upload_song", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/upload_song"
+method :"POST"
+ิInput body :{
+    "song": {
+        "SongID": "88695477",
+        "SongName": "Pretty Boy",
+        "SongPicture": "www.songShazamGroup13_88695477",
+        "SongReleaseDate": "2014-01-23T17:00:00.000",
+        "ArtistID": "20000215", 
+        "SongDesc": "testDesc"
+    }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "massage": "add done!"
+}
+
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/upload_song"
+method :"POST"
+ิInput body :{
+    "song": {
+        "SongID": "88695485",
+        "SongName": "Never Ever",
+        "SongPicture": "www.songShazamGroup13_88695485",
+        "SongReleaseDate": "2018-03-23T17:00:00.000",
+        "ArtistID": "20879812", 
+        "SongDesc": "testDesc"
+    }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "massage": "add done!"
+}
+
+*/
 //------------------------- user_information ---------------------------
 // upload user information
 router.post("/upload_user_information", function (req, res) {
@@ -784,6 +1273,54 @@ router.post("/upload_user_information", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/upload_user_information"
+method :"POST"
+ิInput body :{
+     "user_information":{
+            "UserID": "37146835",
+            "UserName": "user10",
+            "UserPassword": "6IVklNyjDboO",
+            "Firstname": "postman",
+            "Lastname": "vpnmana",
+            "Email": "pos589UY@test.com",
+            "Address": "Buri Ram,",
+            "Age": 30,
+            "UserRole": "user"
+        }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "massage": "add done!"
+}
+
+*/
+/*
+@Test Case 2
+URL:""
+method :"POST"
+ิInput body :{
+     "user_information":{
+            "UserID": "37146866",
+            "UserName": "user11",
+            "UserPassword": "5qkEC5cmBbFk",
+            "Firstname": "Ganerer",
+            "Lastname": "netword",
+            "Email": "Bbfk68KKK@test.com",
+            "Address": "Lamphun,",
+            "Age": 28,
+            "UserRole": "user"
+        }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "massage": "add done!"
+}
+
+*/
 //------------------------- login_history ---------------------------
 //upload loginhistory
 router.post("/upload_login_history", function (req, res) {
@@ -831,7 +1368,34 @@ router.delete("/delete_artist", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/delete_artist"
+method :"DELETE"
+ิInput body :{
+     "ArtistID":"20091864"
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "ArtistID has been deleted successfully."
+}
 
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/delete_artist"
+method :"DELETE"
+ิInput body :{
+  "ArtistID":"20091256"
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "ArtistID has been deleted successfully."
+}
+
+*/
 
 //delete song
 router.delete("/delete_song", function (req, res) {
@@ -853,20 +1417,47 @@ router.delete("/delete_song", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/delete_song"
+method :"DELETE"
+ิInput body :{
+     "SongID": "88695485"
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "SongID has been deleted successfully."
+}
 
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/delete_song"
+method :"DELETE"
+ิInput body :{
+     "SongID": "88695477"
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "SongID has been deleted successfully."
+}
+
+*/
 
 //delete user infos
 router.delete("/delete_user_infos", function (req, res) {
-    let userID = req.body.userID;
+    let UserID = req.body.UserID;
 
-    if (!userID) {
+    if (!UserID) {
         return res.status(400).send({
             error: true,
             message: "Please provide userID"
         });
     }
 
-    Connection.query("DELETE FROM user_inforamtion WHERE UserID=?", userID, function (error, results) {
+    Connection.query("DELETE FROM user_information WHERE UserID=?", UserID, function (error, results) {
         if (error) throw error;
         return res.send({
             error: false,
@@ -875,7 +1466,34 @@ router.delete("/delete_user_infos", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/delete_user_infos"
+method :"DELETE"
+ิInput body :{
+    "UserID": "37146835"
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "UserID has been deleted successfully."
+}
 
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/delete_user_infos"
+method :"DELETE"
+ิInput body :{
+   "UserID": "37146866"
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "UserID has been deleted successfully."
+}
+
+*/
 //delete history
 router.delete("/delete_history", function (req, res) {
     let HistoryID = req.body.HistoryID;
@@ -925,11 +1543,50 @@ router.put("/update_artist", function (req, res) {
         });
     });
 });
+/*
+@Test Case 1
+URL:"http://localhost:3000/update_artist"
+method :"PUT"
+ิInput body :{
+    "artist":{
+        "ArtistID": "20000215",
+        "ArtistName": "M2M",
+        "ArtistPicture": "www.google.com",
+        "ArtistDOB": "2008-02-13 00:00:00",
+        "ArtistDesc": "testDesc"
+    }
+}
+body:{
+    "error": false,
+    "data": 1,
+    "message": "Artist ID has been updated successfully."
+} 
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/update_artist"
+method :"PUT"
+ิInput body :{
+    "artist":{
+        "ArtistID": "20111103",
+        "ArtistName": "CNBLUE",
+        "ArtistPicture": "www.google.com",
+        "ArtistDOB": "2012-02-13 00:00:00",
+        "ArtistDesc": "testDesc"
+    }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "Artist ID has been updated successfully."
+}
+*/
+
 // update song
 
 router.put("/update_song", function (req, res) {
-    let song_id = req.body.artist.SongID;
-    let song = req.body.artist;
+    let song_id = req.body.song.SongID;
+    let song = req.body.song;
 
     if (!song_id || !song) {
         return res.status(400).send({
@@ -947,12 +1604,53 @@ router.put("/update_song", function (req, res) {
         });
     });
 });
+
+/*
+@Test Case 1
+URL:"http://localhost:3000/update_song"
+method :"PUT"
+ิInput body :{
+    "song": {
+         "SongID": "14795680",
+            "SongName": "Amnesia",
+            "SongPicture": "www.songShazamGroup13_14795680",
+            "SongReleaseDate": "2022-09-25T17:00:00.000",
+            "ArtistID": "20111103",
+            "SongDesc": "testDesc"
+    }
+}
+body:{
+    "error": false,
+    "data": 1,
+    "message": "Song ID has been updated successfully."
+}
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/update_song"
+method :"PUT"
+ิInput body :{
+    "song": {
+         "SongID": "14795680",
+            "SongName": "Amnesia",
+            "SongPicture": "www.songShazamGroup13_14795680",
+            "SongReleaseDate": "2022-09-25T18:00:00.000",
+            "ArtistID": "20111103",
+            "SongDesc": "testDesc"
+    }
+}
+body: {
+    "error": false,
+    "data": 1,
+    "message": "Song ID has been updated successfully."
+}
+*/
 // update user_information
 router.put("/update_user", function (req, res) {
-    let user_id = req.body.artist.UeserID;
+    let user_id = req.body.user_information.UserID;
     let user = req.body.user;
 
-    if (!user || !user_id) {
+    if (!user_id|| !user ) {
         return res.status(400).send({
             error: true,
             message: "Please provide User ID"
@@ -969,7 +1667,20 @@ router.put("/update_user", function (req, res) {
     });
 });
 
-
+/*
+@Test Case 1
+URL:"http://localhost:3000/update_user"
+method :"PUT"
+ิInput body :
+body:
+*/
+/*
+@Test Case 2
+URL:"http://localhost:3000/update_user"
+method :"PUT"
+ิInput body :
+body: 
+*/
 
 // login
 router.post("/user/login", function (req, res) {
@@ -997,6 +1708,8 @@ router.post("/user/login", function (req, res) {
         
     });
 });
+
+
 
 app.use(router);
 app.listen(process.env.PORT, () => {

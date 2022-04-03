@@ -1,6 +1,7 @@
 DROP DATABASE IF EXISTS itcs212_phase_2;
-CREATE DATABASE IF NOT EXISTS  itcs212_phase_2;
+CREATE DATABASE IF NOT EXISTS  itcs212_phase_2 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE itcs212_phase_2;
+
 
 DROP TABLE IF EXISTS artist;
 CREATE TABLE artist (
@@ -9,7 +10,7 @@ CREATE TABLE artist (
     ArtistPicture	VARCHAR(30)		NOT NULL,
     ArtistDOB		DATETIME		NOT NULL,
     ArtistDesc		VARCHAR(200)
-);
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 DROP TABLE IF EXISTS song;
 CREATE TABLE song(
 	SongID			CHAR(8)			PRIMARY KEY,
@@ -20,7 +21,7 @@ CREATE TABLE song(
     SongDesc		VARCHAR(200),
 	CONSTRAINT		FK_Song	FOREIGN KEY (ArtistID)
     REFERENCES		Artist (ArtistID)
-);
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 DROP TABLE IF EXISTS user_information;
 CREATE TABLE user_information (
 	UserID			CHAR(8)			PRIMARY KEY,
@@ -32,7 +33,7 @@ CREATE TABLE user_information (
     Address			VARCHAR(100)	NOT NULL,
     Age				INT				NOT NULL,
     UserRole		VARCHAR(10)		NOT NULL
-);
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 DROP TABLE IF EXISTS login_history;
 CREATE TABLE login_history (	
 	HistoryID		VARCHAR(8)		PRIMARY KEY,
@@ -40,7 +41,7 @@ CREATE TABLE login_history (
     UserName		VARCHAR(30)		NOT NULL,
     UserRole		VARCHAR(10)		NOT NULL,
 	CONSTRAINT		FK_history	FOREIGN KEY (UserID) REFERENCES	user_information (UserID)
-);
+)ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 INSERT INTO artist(ArtistID, ArtistName, ArtistPicture, ArtistDOB, ArtistDesc)
 VALUE	(20455980,'Wonder girl','www.google.com','2007-02-13 00:00:00', 'testDesc'),

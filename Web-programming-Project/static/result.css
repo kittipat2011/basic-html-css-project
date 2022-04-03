@@ -1,0 +1,221 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap%27");
+/* Color */
+:root {
+  --main-background: linear-gradient(to right, #141e30, #243b55);
+  --font-style: "Zen Maru Gothic", sans-serif;
+  --font-color-light: #ffff;
+  --font-color-dark: #0000;
+  --color-primary: #0a043c;
+  --color-secondary: #091940;
+  --font-color-light-secondary: #ff7f50;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-style);
+}
+
+/* Nav Bar */
+.nav-main {
+  background:#141e30;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 2px solid #F16357;
+}
+.btn-burger {
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.btn-burger:hover {
+  color: var(--font-color-light);
+}
+.logo {
+  color: var(--font-color-light);
+}
+.btn-search {
+  background: var(--main-background);
+  color: var(--font-color-light);
+}
+.btn-search:hover {
+  background: var(--font-color-light-secondary);
+}
+
+/* Side Bar */
+.side-bar {
+  /* border: 3px solid rgb(255, 30, 30); */
+  background: #141e30;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  left: -1000px;
+  z-index: 1;
+  transition: 0.6s;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(255, 255, 255, 0.09) 0px 32px 16px;
+}
+.side-bar-show {
+  left: 0;
+}
+.side-menu {
+  position: relative;
+  top: 100px;
+  height: 300px;
+  left: 20px
+}
+.side-menu ul li {
+  width: 100%;
+  padding: 5px ;
+}
+.side-menu ul li a {
+  display: block;
+  font-size: 22px;
+  padding: 10px;
+  text-decoration: none;
+  transition: 0.5s;
+  color: var(--font-color-light);
+}
+.side-menu ul li a:hover {
+  font-size: 21px;
+  background: #141e30;
+  box-shadow:  rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+  rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+  rgba(255, 255, 255, 0.09) 0px 32px 16px;
+}
+/* Content */
+.content {
+  /* border: 3px solid rgb(255, 217, 47); */
+  height: 970px;
+  width: 100%;
+  /* width: 1653px; */
+  position: relative;
+  /* left:250px; */
+  background: var(--main-background);
+  
+}
+
+.content .content-body {
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+  
+  /* border: 3px solid greenyellow; */
+}
+/* .content .content-body .content-box {
+  margin: 50px 0;
+} */
+.box {
+  width: 1000px;
+  height: 500px;
+  /* border: 1px solid greenyellow; */
+  padding: 25px;
+  border-radius: 20px;
+  background: #141e30;
+  
+}
+.box1 {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.box1 img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  
+}
+.box2 {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid blue; */
+}
+.song-info {
+  padding: 25px;
+  font-size: 25px;
+  color: var(--font-color-light);
+}
+.info {
+  margin-bottom: 25px;
+}
+
+
+/* Player Bar */
+.player-bar {
+  background: #141e30;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  border-top: 1px solid #141e30;
+}
+.player-box {
+  height: 100%;
+}
+.music-info {
+  height: 70%;
+  width: 25%;
+  margin: 0 10px;
+}
+.music-info .info-content {
+  height: 100%;
+}
+.music-info .info-content .img-box {
+  width: 70px;
+  height: 100%;
+  margin: 0 20px;
+}
+.music-info .info-content .img-box img {
+  width: 70px;
+  height: 100%;
+}
+.music-info .info-content .info-body {
+  color: var(--font-color-light);
+}
+.player-control {
+  height: 70%;
+  width: 50%;
+  margin: 0 10px;
+}
+.player-control audio {
+  width: 100%;
+}
+.btn-control-box {
+  height: 70%;
+  width: 25%;
+  margin: 0 10px;
+}
+.btn-control-box .btn-control {
+  padding: 0 25px;
+  cursor: pointer;
+  font-size: 25px;
+  color: var(--font-color-light);
+  transition: 0.3s;
+}
+.btn-control-box .btn-control:hover {
+  font-size: 30px;
+}
+
+/* Player menu bar */
+.btn-control-box .btn-control:hover.btn-loop {
+  color: #F16357;
+}
+.btn-control-box .btn-control:hover.btn-random {
+  color: #F16357;
+}
+.btn-control-box .btn-control:hover.btn-addList {
+  color: #F16357;
+}
+.btn-control-box .btn-control:hover.btn-like {
+  color: #F16357;
+}
+

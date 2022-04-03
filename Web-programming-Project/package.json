@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  },
+  "name": "phase_2",
+  "description": "",
+  "version": "1.0.0",
+  "main": "login.js",
+  "scripts": {
+    "start": "nodemon login"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nungsorb/Web-programming-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nungsorb/Web-programming-Project/issues"
+  },
+  "homepage": "https://github.com/nungsorb/Web-programming-Project#readme"
+}
