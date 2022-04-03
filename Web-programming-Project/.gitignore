@@ -1,0 +1,8 @@
+# env
+.env
+
+# folder
+/node_modules
+# etc
+run.bat
+desktop.ini
