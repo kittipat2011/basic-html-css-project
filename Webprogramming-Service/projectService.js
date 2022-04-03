@@ -1647,7 +1647,7 @@ body: {
 */
 // update user_information
 router.put("/update_user", function (req, res) {
-    let user_id = req.body.user_information.UserID;
+    let user_id = req.body.user.UserID;
     let user = req.body.user;
 
     if (!user_id|| !user ) {
