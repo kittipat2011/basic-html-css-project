@@ -1,4 +1,4 @@
-Fist of all, there 2 directories named,
+Frist of all, there 2 directories named,
 - react_project
 - Webprogramming-Service
 
